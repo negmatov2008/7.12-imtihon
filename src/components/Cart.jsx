@@ -16,7 +16,7 @@ const CartStyle = styled.div`
   top: 76px;
   left: 7px;
 
-  ${desktop}{
+  ${desktop} {
     top: 105px;
     left: 68%;
   }
@@ -31,7 +31,7 @@ function Cart({ hidden }) {
   const price = useSelector((state) => state.cart.price);
   const delate = (e) => {
     e.stopPropagation();
-    dispatch(addProduct(0));
+    dispatch(addProduct(1));
   };
   return (
     <>
