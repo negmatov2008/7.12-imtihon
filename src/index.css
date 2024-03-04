@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Kumbh Sans";
+}
+
+#modal::backdrop {
+  opacity: 0.75;
+  background: #000;
+  margin-left: 251px;
+  z-index: 10 !important;
+}
+
+#modal {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 900px !important;
+  z-index: 8;
+  position: relative !important;
+}
+
+#img::backdrop {
+  opacity: 0.75;
+  background: #000;
+}
+
+#img{
+  border: none !important;
+  outline: none !important;
+  color: transparent !important;
+  border-bottom: 0 none;
+  border-top: 0 none;
+  overflow: none !important;
+}
+#img:focus{
+  outline: none !important;
+  border: none !important;
+  color: transparent !important;
+}
