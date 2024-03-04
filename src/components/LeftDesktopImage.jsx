@@ -72,7 +72,7 @@ function LeftDesktopImage() {
         <img
           onClick={() => imgShow()}
           className="w-[445px] h-[445px] rounded-[15px] cursor-pointer"
-          src={`image-product-${img}.jpg`}
+          src={`image-product-${img+1}.jpg`}
           alt=""
         />
 
