@@ -5,6 +5,8 @@ import SwitchImage from "./SwitchImage";
 import Content from "./Content";
 import LeftDesktopImage from "./LeftDesktopImage";
 import { css, styled } from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../Redux/cart";
 
 const Select = styled.img`
   width: 88px;
@@ -27,7 +29,8 @@ const Select = styled.img`
 `;
 
 function Root() {
-  const [img, setImg] = useState(1);
+  const dispatch = useDispatch();
+  const img = useSelector((state) => state.cart.how);
 
   const images = [
     {
@@ -50,31 +53,31 @@ function Root() {
 
   const perveusly = () => {
     if (img == 1) {
-      setImg(4);
+      dispatch(addProduct(4));
     }
     if (img == 2) {
-      setImg(1);
+      dispatch(addProduct(1));
     }
     if (img == 3) {
-      setImg(2);
+      dispatch(addProduct(2));
     }
     if (img == 4) {
-      setImg(3);
+      dispatch(addProduct(3));
     }
   };
 
   const next = () => {
     if (img == 1) {
-      setImg(2);
+      dispatch(addProduct(2));
     }
     if (img == 2) {
-      setImg(3);
+      dispatch(addProduct(3));
     }
     if (img == 3) {
-      setImg(4);
+      dispatch(addProduct(4));
     }
     if (img == 4) {
-      setImg(1);
+      dispatch(addProduct(1));
     }
   };
   return (
