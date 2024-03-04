@@ -6,7 +6,7 @@ import Content from "./Content";
 import LeftDesktopImage from "./LeftDesktopImage";
 import { css, styled } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../Redux/cart";
+import { addImageProduct, addProduct } from "../Redux/cart";
 
 const Select = styled.img`
   width: 88px;
@@ -53,31 +53,31 @@ function Root() {
 
   const perveusly = () => {
     if (img == 1) {
-      dispatch(addProduct(4));
+      dispatch(addImageProduct(4));
     }
     if (img == 2) {
-      dispatch(addProduct(1));
+      dispatch(addImageProduct(1));
     }
     if (img == 3) {
-      dispatch(addProduct(2));
+      dispatch(addImageProduct(2));
     }
     if (img == 4) {
-      dispatch(addProduct(3));
+      dispatch(addImageProduct(3));
     }
   };
 
   const next = () => {
     if (img == 1) {
-      dispatch(addProduct(2));
+      dispatch(addImageProduct(2));
     }
     if (img == 2) {
-      dispatch(addProduct(3));
+      dispatch(addImageProduct(3));
     }
     if (img == 3) {
-      dispatch(addProduct(4));
+      dispatch(addImageProduct(4));
     }
     if (img == 4) {
-      dispatch(addProduct(1));
+      dispatch(addImageProduct(1));
     }
   };
   return (
@@ -177,7 +177,7 @@ function Root() {
               {images.map((i) => (
                 <Select
                   key={i.id}
-                  onClick={() => setImg(i.id)}
+                  onClick={() => dispatch(addImageProduct(i.id))}
                   className="hover:opacity-[0.6]"
                   sselect={i.id === img}
                   src={`image-product-${i.id}-thumbnail.jpg`}

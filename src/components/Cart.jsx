@@ -27,11 +27,11 @@ const Button = styled.button`
 `;
 function Cart({ hidden }) {
   const dispatch = useDispatch();
-  const product = useSelector((state) => state.cart.how);
+  const product = useSelector((state) => state.cart.cartHow);
   const price = useSelector((state) => state.cart.price);
   const delate = (e) => {
     e.stopPropagation();
-    dispatch(addProduct(1));
+    dispatch(addProduct(0));
   };
   return (
     <>

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function RightHeader() {
   const [cart, setCart] = useState(true);
   const bodyEl = document.getElementById("body");
-  const prduct = useSelector((state) => state.cart.how);
+  const prduct = useSelector((state) => state.cart.cartHow);
 
   useEffect(() => {
     bodyEl.addEventListener("click", () => {

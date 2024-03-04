@@ -4,7 +4,7 @@ import { desktop } from "../utils/Responsive";
 import { css } from "@emotion/react";
 import { imgShow } from "../utils/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct } from "../Redux/cart";
+import { addImageProduct, addProduct } from "../Redux/cart";
 
 const DesktopStyle = styled.div`
   display: none;
@@ -59,7 +59,7 @@ function LeftDesktopImage() {
   ];
   const search = () => {
     const newImg = images.find((i) => i.id === img);
-    dispatch(addProduct(newImg.id));
+    dispatch(addImageProduct(newImg.id));
   };
 
   useEffect(() => {
@@ -80,7 +80,7 @@ function LeftDesktopImage() {
           {images.map((i) => (
             <Select
               key={i.id}
-              onClick={() => dispatch(addProduct(i.id))}
+              onClick={() => dispatch(addImageProduct(i.id))}
               className="hover:opacity-[0.6]"
               sselect={i.id === img}
               src={`image-product-${i.id}-thumbnail.jpg`}
