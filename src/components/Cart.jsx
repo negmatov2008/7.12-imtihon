@@ -13,7 +13,7 @@ const CartStyle = styled.div`
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5);
-  top: 90px;
+  top: 83px;
   left: 7px;
 
   ${desktop} {
