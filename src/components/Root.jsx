@@ -83,7 +83,7 @@ function Root() {
   return (
     <>
       <Header />
-      <main className="flex md:mt-[230px]  flex-col gap-[24px] md:flex-row md:max-w-[1110px] md:items-center mx-auto md:gap-[50px] md:pb-[132px]">
+      <main className="flex md:mt-[230px] mt-[77px]  flex-col gap-[24px] md:flex-row md:max-w-[1110px] md:items-center mx-auto md:gap-[50px] md:pb-[132px]">
         <LeftDesktopImage />
         <SwitchImage />
         <Content />

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { styled } from "styled-components";
-import { addImage } from "../Redux/sneacers";
+
 import { addImageProduct } from "../Redux/cart";
 
 function SwitchImage() {
