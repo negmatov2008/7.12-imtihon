@@ -29,6 +29,7 @@ function Cart({ hidden }) {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.cart.cartHow);
   const price = useSelector((state) => state.cart.price);
+  const img = useSelector((state) => state.cart.how);
   const delate = (e) => {
     e.stopPropagation();
     dispatch(addProduct(0));
@@ -43,7 +44,7 @@ function Cart({ hidden }) {
             <div className="flex items-center justify-between">
               <img
                 className="w-[50px] rounded-[4px]"
-                src="image-product-1-thumbnail.jpg"
+                src={`image-product-${img}-thumbnail.jpg`}
                 alt=""
               />
               <div className="flex flex-col ">

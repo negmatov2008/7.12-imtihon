@@ -2,37 +2,38 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { styled } from "styled-components";
 import { addImage } from "../Redux/sneacers";
+import { addImageProduct } from "../Redux/cart";
 
 function SwitchImage() {
-  const image = useSelector((state) => state.images.activeImage);
+  const image = useSelector((state) => state.cart.how);
   const dispatch = useDispatch();
   const perveusly = () => {
     if (image == 1) {
-      dispatch(addImage(4));
+      dispatch(addImageProduct(4));
     }
     if (image == 2) {
-      dispatch(addImage(1));
+      dispatch(addImageProduct(1));
     }
     if (image == 3) {
-      dispatch(addImage(2));
+      dispatch(addImageProduct(2));
     }
     if (image == 4) {
-      dispatch(addImage(3));
+      dispatch(addImageProduct(3));
     }
   };
 
   const next = () => {
     if (image == 1) {
-      dispatch(addImage(2));
+      dispatch(addImageProduct(2));
     }
     if (image == 2) {
-      dispatch(addImage(3));
+      dispatch(addImageProduct(3));
     }
     if (image == 3) {
-      dispatch(addImage(4));
+      dispatch(addImageProduct(4));
     }
     if (image == 4) {
-      dispatch(addImage(1));
+      dispatch(addImageProduct(1));
     }
   };
 
