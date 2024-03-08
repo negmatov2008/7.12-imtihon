@@ -7,6 +7,7 @@ import LeftDesktopImage from "./LeftDesktopImage";
 import { css, styled } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { addImageProduct, addProduct } from "../Redux/cart";
+import { createPortal } from "react-dom";
 
 const Select = styled.img`
   width: 88px;
@@ -88,10 +89,10 @@ function Root() {
         <SwitchImage />
         <Content />
       </main>
-      <dialog id="modal" className="h-full">
+      {createPortal(<dialog id="modal" className="min-h-full">
         <div
           id="cont"
-          className="w-[250px] pb-[70px] h-full pt-[24px] pl-[25px] bg-white"
+          className="w-[250px] pb-[70px] min-h-full pt-[24px] pl-[25px] bg-white"
         >
           <button
             className="mb-[53px]"
@@ -114,10 +115,10 @@ function Root() {
             <li>Contact</li>
           </ul>
         </div>
-      </dialog>
+      </dialog>, document.body)}
       <dialog
         id="img"
-        className="w-[500px]     text-white relative  rounded-[10px]  bg-transparent"
+        className="w-[500px]     text-white relative  rounded-[10px]  bg-white"
       >
         <div className="flex flex-col gap-[10px]">
           <button onClick={() => imgClose()} className="flex justify-end ">

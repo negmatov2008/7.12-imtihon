@@ -1,1 +1,1 @@
-export const desktop = "@media screen and (min-width: 1400px)";
+export const desktop = "@media screen and (min-width: 1200px)";

@@ -9,15 +9,19 @@ body {
 #modal::backdrop {
   opacity: 0.75;
   background: #000;
-  margin-left: 251px;
+  height: 100%;
   z-index: 10 !important;
 }
 
+#cont{
+  height: 100%;
+}
 #modal {
   padding: 0 !important;
   margin: 0 !important;
-  height: 900px !important;
-  z-index: 8;
+  height: 100% !important;
+  background-color: white !important;
+  z-index: 1000;
   position: relative !important;
 }
 
@@ -26,7 +30,7 @@ body {
   background: #000;
 }
 
-#img{
+#img {
   border: none !important;
   outline: none !important;
   color: transparent !important;
@@ -34,7 +38,7 @@ body {
   border-top: 0 none;
   overflow: none !important;
 }
-#img:focus{
+#img:focus {
   outline: none !important;
   border: none !important;
   color: transparent !important;
